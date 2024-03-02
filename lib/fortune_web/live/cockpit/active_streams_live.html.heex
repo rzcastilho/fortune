@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <h2>Active Trade Streams</h2>
+    <ul>
+      <li :for={trade <- @trades}><%= trade.symbol %></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Active Kline (Candlestick)  Streams</h2>
+    <ul>
+      <li :for={kline <- @klines}><%= "#{kline.symbol}@#{kline.interval}" %></li>
+    </ul>
+  </div>
+</div>
